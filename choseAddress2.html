@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>选择地址组件2</title>
+		<style type="text/css">
+		    *{margin: 0;padding: 0;}
+			.JM_choseAddressBox{width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: white;}
+		    .JM_choseAddressBox header{width: 100%;height: 40px;line-height: 40px;margin: 0 auto;background: #f5f5f5;}
+		    .JM_choseAddressBox header span{color: #007dff;}
+		    .JM_choseAddressBox header span:hover{cursor: pointer;}
+		    .JM_choseAddressBox header span.cancel{margin-left: 5%;}
+		    .JM_choseAddressBox header span.sure{float: right;margin-right: 5%;}
+		    .JM_choseAddressBox section.body{display: flex;height: calc(100% - 40px);}
+		    .JM_choseAddressBox section.body>div{width: 50%;height: 100%;overflow: auto;text-align: center;}
+		    .JM_choseAddressBox section.body>.left{border-right: 1px solid #DCDCDC;}
+		    .JM_choseAddressBox ul{width: 100%;}
+		    .JM_choseAddressBox ul li{height: 40px;line-height: 40px;border-bottom: 1px solid #DCDCDC;}
+		    .JM_choseAddressBox ul li.checked{background: rgba(220, 220, 220, 0.54);}
+		</style>
+	</head>
+
+	<body>
+		<button class="chose">选择地址</button>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/choseAddress2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var data = [
+			{
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 15:53:54",
+				groupLevel: "2",
+				id: "16092315535310097279",
+				name: "松原市",
+				pid: "16092309321010096495",
+				remark: "",
+				seq: "4",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, 
+			{
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 09:32:10",
+				groupLevel: "1",
+				id: "16092309321010096495",
+				name: "吉林省",
+				pid: "0",
+				remark: "",
+				seq: "1",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, 
+			{
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 09:32:10",
+				groupLevel: "1",
+				id: "16092309321010096496",
+				name: "黑龙江",
+				pid: "0",
+				remark: "",
+				seq: "1",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, 
+			{
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 09:32:10",
+				groupLevel: "1",
+				id: "16092309321010096426",
+				name: "哈尔滨",
+				pid: "16092309321010096496",
+				remark: "",
+				seq: "1",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, 
+			{
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 09:32:10",
+				groupLevel: "1",
+				id: "16092309321010096416",
+				name: "哈尔滨市区",
+				pid: "16092309321010096426",
+				remark: "",
+				seq: "1",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, 
+			{
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 16:14:16",
+				groupLevel: "3",
+				id: "16092316141510097310",
+				name: "扶余县",
+				pid: "16092315535310097279",
+				remark: "",
+				seq: "5",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, {
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 16:14:34",
+				groupLevel: "4",
+				id: "16092316143310097312",
+				name: "五家站镇",
+				pid: "16092316141510097310",
+				remark: "",
+				seq: "6",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, {
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 16:14:41",
+				groupLevel: "5",
+				id: "16092316144110097314",
+				name: "大洼村",
+				pid: "16092316143310097312",
+				remark: "",
+				seq: "7",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, {
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-23 16:14:47",
+				groupLevel: "6",
+				id: "16092316144710097316",
+				name: "三组",
+				pid: "16092316144110097314",
+				remark: "",
+				seq: "8",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, {
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-28 21:39:03",
+				groupLevel: "2",
+				id: "16092821390210140158",
+				name: "成都市",
+				pid: "16092309321010096495",
+				remark: "",
+				seq: "11",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, {
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-28 21:39:32",
+				groupLevel: "3",
+				id: "16092821393210140160",
+				name: "高新区",
+				pid: "16092821390210140158",
+				remark: "",
+				seq: "12",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}, {
+				contactsId: "16092115360310094173",
+				createTime: "2016-09-28 21:39:43",
+				groupLevel: "3",
+				id: "16092821394310140162",
+				name: "武侯区",
+				pid: "16092821390210140158",
+				remark: "",
+				seq: "13",
+				spId: "16092115360310094170",
+				userId: "16092115360310094171"
+			}]
+			var choseAddress = new choseAddress(data)
+			    choseAddress.init(function(res){
+			    	console.log(res)
+			    })
+			$(".chose").click(function(){
+			})
+			
+		</script>
+	</body>
+
+</html>
