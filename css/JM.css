@@ -1,0 +1,244 @@
+/*正则验证提示*/
+*{margin: 0;padding: 0;list-style: none;font-family: "微软雅黑";text-decoration: none;font-size: 14px}
+/*背景色*/
+.default{background: white;color: black;}
+.default:hover{background:#ececec}
+.primary{background: #1796f7;color: white;}
+.warning{background: #f67a18;color: white;border: 1px solid #f57b16;}
+.warning:hover{opacity:0.8}
+.danger{background: #f54336;color: white;}
+.limit{background: #d0d0d0;color: white;}
+.limit:hover{cursor: not-allowed;}
+input{border: 1px solid #E2E2E2;border-radius: 2px;text-indent: 4px;appearance: none;outline: none;}
+input.JM_small{width: 120px;height: 30px;}
+input.JM_middle{width: 180px;height: 30px;}
+input.JM_large{width: 250px;height: 30px;}
+input.JM_super{width: 300px;height: 30px;}
+.JM_errortips{color: red;margin-left: 5px;}
+
+/*按钮组*/
+button{border: none;border-radius: 4px;height: 30px;line-height: 30px;padding: 0 5px;outline: none;background: white;color: black;border: 1px solid #E2E2E2;font-size:12px}
+button:hover{cursor: pointer;}
+button.JM_btnXSmall{width: 40px;}
+button.JM_btnSmall{width: 60px;}
+button.JM_btnMiddle{width: 100px;}
+button.JM_btnLarge{width: 140px;}
+button.void{background: #EBEBEB;}
+button.void:hover{cursor: not-allowed;}
+button span.addIcon{font-size: 22px;position: relative;top: -1px;vertical-align: bottom;margin-right: 2px;}
+/*提示框组*/
+.JM_cover{position: fixed;width: 100%;height: 100%;left: 0;top: 0;background: black;opacity: 0.45;z-index: 10;}
+.JM_tipsAutoHide{width: 250px;height: 50px;line-height: 50px;text-align: center;border-radius: 4px;background: #f89545;color: white;position: fixed;left: 50%;top:30%;margin-left: -125px;margin-top: -25px;z-index: 99;}
+.JM_tipsConfirm{
+	width: 400px;
+	height: auto;
+	background: white;
+	border: 1px solid #E2E2E2;
+	border-radius: 4px;
+	position: fixed;
+	left: 50%;
+	top:55%;
+	margin-left: -200px;
+	margin-top: -75px;
+	z-index: 99;
+}
+.JM_tipsConfirm header{text-align:center;position: relative;border-bottom: 1px dashed #E2E2E2;height:30px;background: #eef2f3;line-height: 30px;font-size:16px}
+.JM_tipsConfirm header span{position: absolute;width: 25px;height: 25px;text-align: center;right: 0;top: 0;}
+.JM_tipsConfirm header span:after{content:" \2716 ";}
+.JM_tipsConfirm header span:hover{cursor: pointer;}
+.JM_tipsConfirm section.body{padding: 20px 0;text-align: center;border-bottom: 1px dashed #E2E2E2;font-size: 16px}
+.JM_tipsConfirm footer{text-align: center;margin: 10px 0;}
+.JM_tipsConfirm footer button{margin-right: 10px;}
+.JM_tipsAlert{
+	width: 400px;
+	height: auto;
+	background: white;
+	border: 1px solid #E2E2E2;
+	border-radius: 4px;
+	position: fixed;
+	left: 50%;
+	top:-50%;
+	margin-left: -200px;
+	margin-top: -75px;
+	z-index: 99;
+}
+.JM_tipsAlert .JM_alert{
+	display:flex
+}
+.JM_tipsAlert i.ep{font-size:60px;color:#f67a18;width:40%}
+.JM_tipsAlert header{position: relative;border-bottom: 1px dashed #E2E2E2;height: 30px;background: #eef2f3;text-align: center;line-height: 30px;}
+.JM_tipsAlert section{padding: 20px 0;text-align: center;border-bottom: 1px dashed #E2E2E2;font-size: 16px}
+.JM_tipsAlert footer{text-align: center;margin: 6px 0;}
+
+/*图片上传*/
+.JM_picBox{width: 600px;height: 400px;position: fixed;border: 1px solid #E2E2E2;border-radius: 4px;top:50%;left: 50%;margin-top: -200px;margin-left: -300px;z-index: 999;background: white;}
+.JM_picBox header{position: relative;border-bottom: 1px dashed #E2E2E2;height: 25px;background: #eef2f3;text-align: center;line-height: 25px;}
+.JM_picBox header span{position: absolute;width: 25px;height: 25px;text-align: center;right: 0;top: 0;}
+.JM_picBox header span:after{content:" \2716 ";}
+.JM_picBox section{overflow: auto;height: 310px;position: relative;padding: 10px;}
+.JM_picBox section #JM_upload{display: none;}
+.JM_picBox section canvas#cutImg{border:2px dashed #f67a18;position: absolute;z-index: 999;display: none;}
+.JM_picBox section span.JM_addImg{font-size: 12px;text-align: center;line-height: 100px;float: right;width: 100px;height: 100px;display: inline-block;border: 1px solid #E2E2E2;margin: 20px 20px 0 0;}
+.JM_picBox footer{border-top: 1px dashed #E2E2E2;text-align: center;margin-top: 10px;position: absolute;width: 100%;height: 40px;line-height: 40px;bottom: 0;left: 0;}
+.JM_picBox section .JM_imgBox{width: 400px;min-height: 290px;border: 1px solid #E2E2E2;display: inline-block;position: relative;}
+.JM_picBox section .JM_imgBox img{}
+.JM_picBox section canvas#cutImg:hover{cursor:crosshair;}
+#JM_cutBox{border: 1px solid #E2E2E2;}
+.JM_picBox section canvas#JM_cutBox{
+	width: 102px;
+    height: 102px;
+    border: 1px solid #E2E2E2;
+    position: absolute;
+    right: 29px;
+    bottom: 34px;
+    display: none;
+}
+/*分页*/
+.JM_setPage{margin: 5px auto;text-align: right; padding: 0px 18px;}
+.JM_setPage .totalNum{margin-right:5px;margin-left:5px}
+.JM_setPage .errorTips{text-align: center;}
+.JM_setPage a{display:inline-block;border: 1px solid #E2E2E2;padding: 5px 7px;border-radius: 2px;color:black}
+.JM_setPage a:hover{cursor: pointer;text-decoration: none;}
+.JM_setPage a.disabled:hover{cursor: not-allowed;}
+.JM_setPage a.disabled{background: #E2E2E2;color: white;}
+.JM_setPage a.disabled .arrow-left{border-right-color: white;}
+.JM_setPage a.disabled .arrow-right{border-left-color: white;}
+.JM_setPage ul{display: inline-block;vertical-align: top;}
+.JM_setPage ul li{float: left;display: inline;border: 1px solid #E2E2E2;padding: 5px 10px;margin: 1px 5px;}
+.JM_setPage ul li.nowPage{color: #f67c17;border:none}
+.JM_setPage ul li.nowPage:hover{cursor: not-allowed !important;}
+.JM_setPage ul li.pageNumber:hover{cursor: pointer;}
+.JM_setPage select.pageCount{padding: 3px;border: 1px solid #e2e2e2;margin-left: 5px;border-radius: 4px;position:relative;top:1px}
+.JM_setPage ul li.pageDot{border: none;}
+.JM_setPage  .arrow-left{width:0; 
+    height:0; 
+    border-top:3px solid transparent;
+    border-bottom:3px solid transparent; 
+    border-right:3px solid #f67c17;
+    display:inline-block;
+    margin-right:5px
+    }
+    .JM_setPage  .arrow-right{
+    width:0; 
+    height:0; 
+    border-top:3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #f67c17;
+      display:inline-block;
+    margin-left:5px
+    }
+
+span.JM_smallWords{font-size: 12px;color: #999999;}
+/*模糊查询*/
+.JM_searchArea{width: 200px;position: relative;margin-left: 10px;}
+.JM_searchArea input{width: 100%;border: 1px solid #E2E2E2;height: 25px;}
+.JM_searchArea ul{width: 100%;border: 1px solid #E2E2E2;border-top: 0;max-height: 150px;overflow: auto;position: absolute;}
+.JM_searchArea ul li{height: 25px;line-height: 25px;}
+.JM_searchArea ul li:hover{cursor: pointer;}
+.chosedSearch{background-color: rgb(128, 223, 125);color: white;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*业务需求样式*/
+.JM_content{width: 1150px;margin: 0 auto;min-height: 600px;margin-bottom: 20px;}
+.JM_nav{}
+.JM_main{width: 100%;margin-top:5px ;border: 1px solid #DCDCDC;}
+.JM_main>.left_nav{width: 150px ;height: 100%;padding-top: 15px;display: inline-block;float: left;}
+.JM_main>.left_nav h5{text-indent: 30px;}
+.JM_main>.left_nav ul li{text-align: center;margin: 10px 0;}
+.JM_main>.left_nav ul li.active{border-left: 2px solid #f67a18;color: #f67a18;}
+.JM_main>.left_nav ul li.active span{color: #f67a18;}
+.JM_main>.left_nav ul li span:before{content: "";display:inline-block;width: 5px;height: 5px;border-radius: 50%;background: #DCDCDC;border: 1px solid #DCDCDC;    margin-right: 10px;
+    /* margin-top: 1px; */
+    position: relative;
+    top: -2px;}
+.JM_main>.left_nav ul li:hover{cursor: pointer;}
+.JM_main>.left_nav ul a{color: #333333;}
+.JM_main>.left_nav ul a:hover{text-decoration: none;}
+.JM_main>.right_content{width: 998px;float: left;border-left:1px solid #dcdcdc}
+.JM_main>.right_content h5{height: 34px;line-height: 34px;background: #f5f5f5;border-bottom: 1px solid #DCDCDC;padding-left: 10px;}
+
+.JM_tableBox table{width: 96%;margin: 10px auto;border-left: 1px solid #DCDCDC;border-top: 1px solid #DCDCDC;}
+.JM_tableBox table tr th{border: 1px solid #DCDCDC;border-left: none;border-top: none;font-size: 12px;background: #f0f1f3;height: 40px;text-align:center;font-family:"微软雅黑";vertical-align:middle !important;font-weight:bold}
+.JM_tableBox table tr td{border: 1px solid #DCDCDC;border-left: none;border-top: none;text-align: center;font-size: 12px;height: 30px;font-family:"微软雅黑";vertical-align:middle !important}
+.JM_tableBox table tr .check{width: 15px;height: 15px;border: 1px solid #DCDCDC;display: inline-block;}
+.JM_tableBox table tr .checked:after{content: "\221A";border: none;background: #FAB450;font-size: 12px;display: inline-block;width: 15px;height: 15px;color: white;position:relative;left:-1px;top:-1px}
+.JM_tableBox table tr .check:hover{cursor: pointer;}
+.JM_tableBox table tr td:last-child a{display: inline-block;padding: 3px 8px;border: 1px solid #DCDCDC;border-radius:2px;margin-left: 5px;}
+.JM_tableBox table tr:hover{background:#f0f1f3 ;}
+.JM_tableBox table tr{width: 100%;}
+.JM_tableBox table tr td button{margin-top: 5px;}
+.JM_triggle{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	border: 1px solid #DCDCDC;
+	left: 228px;
+    background: white;
+    border-right: none;
+    border-top: none;
+	}
+.JM_triggleTop{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	transform: rotateZ(45deg);
+	-webkit-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	-o-transform: rotateZ(45deg);
+	border: 1px solid #DCDCDC;
+    background: white;
+    border-right: none;
+    border-bottom: none;
+	}
+.JM_cursor:hover{cursor: pointer;}	
+
+
+.JM_inputLine{margin: 15px 0;position: relative;}
+.JM_inputLine label i{color: #fd2525;margin-right: 5px;}
+.JM_inputLine label{width: 100px;display: inline-block;text-align: right;}
+.JM_inputLine input{margin-left: 15px;height: 30px;border: 1px solid #DCDCDC;width: 200px;}
+.JM_inputLine select{margin-left: 15px;height: 30px;border: 1px solid #DCDCDC;width: 200px;}
+.JM_inputLine button{margin-left: 15px;}
+.JM_flex2{margin: 15px 0;display: flex;} 
+.JM_flex2 .left i{color: #fd2525;margin-right: 5px;}
+.JM_flex2 .left{width: 100px;display: inline-block;text-align: right;}
+.JM_flex2 .right{width: calc(80% - 90px);padding-left: 15px;} 
+.JM_flex2 .right button{margin:0px 2px 8px 2px ;position: relative;}
+.JM_flex2 .right button.checked{border: 1px solid #f67c17;}
+.JM_flex2 .right button i{width: 20px;height: 25px;position: absolute;display: inline-block;right: 0;bottom: 0;background: url(../../img/com/icon.png) no-repeat -25px -39px;}
+.JM_fileBox i.fileIcon{width: 15px;height: 15px;display: inline-block;background: url(../../img/com/icon.png) no-repeat -3px -51px;margin-right: 3px;position: relative;top: 3px;}
+.JM_fileBox nav{position: relative;display: inline-block;padding: 5px 15px;margin-top: 5px;}
+ span.closeFile{z-index:9;width: 14px;height: 14px;font-size: 12px;color: white;background: #f67c17;position: absolute;right: -7px;top:0;border-radius: 50%;line-height: 11px;text-align: center;}
+hr.JM_dashed{height: 1px;border-top: 1px dashed #DCDCDC;margin-top: 30px;margin-bottom: 30PX;}
+i.fileIcon{width: 15px;height: 15px;display: inline-block;background: url(../../img/com/icon.png) no-repeat -3px -51px;margin-right: 3px;position: relative;top: 3px;}
+span.JM_rectCheck{width: 15px;height: 15px;display: inline-block;border-radius: 4px;border: 1px solid #DCDCDC;position: relative;top: 2px;margin-right: 10px;}
+span.JM_rectCheck.check:after{content: "\2713";display: inline-block;width: 15px;height: 15px;position: absolute;left: 0;top: 0;background: #f57b16;border-radius: 4px;color: white;line-height: 15px;text-align: center;}
+.progress-wrap{position:fixed;left:0;top:0;z-index:99999;top:40%;left:48%}
+.JM_nav{margin-top:5px}
+.JM_flex2 section.left label{width:100px}
+
+/*进度条*/
+.JM_processBar{width: 100%;text-align: center;position: fixed;top: 0;left: 0;}
+.JM_processBar>div{height: 5px;}
+.JM_processBar>.bg{width: 100%;background: #DCDCDC;}
+.JM_processBar>.proccessBar{width: 0%;position: absolute;left: 0;top: 0;background: orangered;}
+/*进度圈*/
+#JM_canvas{width: 100px;height: 100px;border: 1px solid #DCDCDC;position: fixed;left: 50%;top: 50%;margin-left: -50px;margin-top: -50px;}

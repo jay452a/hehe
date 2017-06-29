@@ -1,0 +1,103 @@
+*{margin: 0;padding: 0;font-family: "微软雅黑";font-size: 14px}
+a{text-decoration: none;}
+li{list-style: none;}
+.showinfo{width: 100%;height: 30px;line-height: 30px;background: red;color: white;position: fixed;top: 0;left:0;text-align: center;font-family: "微软雅黑"}
+a:hover{text-decoration: none;cursor: pointer;}
+button:hover{cursor: pointer;}
+/*删除弹出框*/
+.JM_deletbox{box-shadow: 3px 4px 5px 1px #C2C0C0;overflow:hidden;width: 200px;height: 120px;background: white;border: 1px solid #E2E2E2;border-radius: 4px;position: fixed;left: 50%;top: 50%;margin-left: -100px;margin-top: -100px;}
+.JM_deletbox p{text-align: center;margin-top: 30px;color: grey;}
+.JM_deletbox button{width: 50%;border: none;height: 30px;outline: none;margin-top: 41px;color: white;}
+.JM_del_confirm{background:#FC9005;}
+/*分页*/
+.JM_setPage{margin: 5px auto;text-align: right;}
+.JM_setPage .totalNum{margin-right:5px;margin-left:5px}
+.JM_setPage .errorTips{text-align: center;}
+.JM_setPage a{display:inline-block;border: 1px solid #E2E2E2;padding: 5px 7px;border-radius: 2px;color:black}
+.JM_setPage a:hover{cursor: pointer;text-decoration: none;}
+.JM_setPage a.disabled:hover{cursor: not-allowed;}
+.JM_setPage a.disabled{background: #E2E2E2;color: white;}
+.JM_setPage a.disabled .arrow-left{border-right-color: white;}
+.JM_setPage a.disabled .arrow-right{border-left-color: white;}
+.JM_setPage ul{display: inline-block;vertical-align: top;}
+.JM_setPage ul li{float: left;display: inline;border: 1px solid #E2E2E2;padding: 5px 10px;margin: 1px 5px;}
+.JM_setPage ul li.nowPage{color: #ff5151;border:none}
+.JM_setPage ul li.nowPage:hover{cursor: not-allowed !important;}
+.JM_setPage ul li.pageNumber:hover{cursor: pointer;}
+.JM_setPage select.pageCount{padding: 3px;border: 1px solid #e2e2e2;margin-left: 5px;border-radius: 4px;position:relative;top:1px}
+.JM_setPage ul li.pageDot{border: none;}
+.JM_setPage  .arrow-left{width:0; 
+    height:0; 
+    border-top:3px solid transparent;
+    border-bottom:3px solid transparent; 
+    border-right:3px solid #ff5151;
+    display:inline-block;
+    margin-right:5px
+    }
+    .JM_setPage  .arrow-right{
+    width:0; 
+    height:0; 
+    border-top:3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #ff5151;
+      display:inline-block;
+    margin-left:5px
+    }
+/*树形结构*/
+.treeShow{width: 20px;height: 20px;display: inline-block;background: url(img/icon_1.png) no-repeat -226px -23px;position: relative;
+    top: 6px}
+.treeShow:hover{cursor: pointer;}
+.treeHide{width: 20px;height: 20px;display: inline-block;background: url(img/icon_1.png) no-repeat -250px -23px;position: relative;display: none;
+top: 6px}
+.treeHide:hover{cursor: pointer;}
+.treeNode label:hover{cursor: pointer;text-decoration: underline;color: grey;}
+/*下来菜单*/
+.ZH_dropdownBox{width: 150px;display: inline-block;margin: 5px;float: left;}
+.ZH_dropdownHead{width: 150px;height: 30px;border: 1px solid gray;border-radius: 4px;position: relative;line-height: 30px;text-indent:5px;}
+.ZH_dropdownHead:hover{cursor: pointer;}
+.ZH_dropdownHead span{position: absolute;display: inline-block;width: 30px;height: 30px;top: 0;right: 0;border-left: 1px solid gray;line-height: 30px;}
+.ZH_dropdownHead span img{position: relative;top: 4px;left: 2px;transition: all 0.2s;-webkit-transition: all 0.2s;-moz-transition: all 0.2s;-ms-transition: all 0.2s;}
+.ZH_dropdownBody{width: 150px;height: 180px;border: 1px solid gray;overflow: auto;}
+.ZH_dropdownBody ul li{height: 30px;line-height: 30px;background: #E2E2E2;border-bottom:1px solid gray ;}
+.ZH_dropdownBody ul li:hover{cursor: pointer;background: #49e27f;color: white;}
+.hide{display: none;}
+/*日历*/
+.DateBox{width: 220px;position: absolute;top: 30px;left: 0;border: 1px solid gray;background: white;z-index: 99;}
+.triggle{position: absolute;width: 15px;height: 15px;transform: rotateZ(45deg);-webkit-transform: rotateZ(45deg);-moz-transform: rotateZ(45deg);-ms-transform: rotateZ(45deg);-o-transform: rotateZ(45deg);border: 1px solid gray;border-right: none;border-bottom: none;top: -9px;left: 50%;margin-left: -10px;background: white;}
+.dateTime{position: relative;clear: both;display: inline-block;}
+.choseDate{width: 220px;}
+.choseYear,.choseMonth{width: 80px;height: 23px;position: relative;display: inline-block;}
+.prevMonth,.nextMonth{width: 20px;height: 21px;border: 1px solid gray;display: inline-block;text-align: center;line-height: 20px;position: relative;top: -1px;}
+.prevMonth{margin-left: 14px;}
+.prevMonth:hover{cursor: pointer;}
+.nextMonth:hover{cursor: pointer;}
+.dateTable{margin-top: 5px;}
+.choseMonth input{width: 100%;margin-top:5px ;border: 1px solid gray;border-left: none;border-right: none;height: 21px;}
+.choseMonth ul{position: absolute;width: 100%;height: 150px;background: white;border: 1px solid gray;overflow: auto;display: none;left: -1px;}
+.choseMonth ul li:hover{cursor: pointer;background: rgb(128, 223, 125);color: white;}
+.choseMonth input:hover{cursor: pointer;}
+.yearList{height: 150px;position: absolute;overflow: auto;width: 100%;background: white;display: none;left: 3px;border: 1px solid gray;}
+.choseYear input{width: 100%;margin-left: 2px;}
+.choseYear input:hover{cursor: pointer}
+.yearList li:hover{cursor: pointer;background: rgb(128, 223, 125);color: white;}
+.dateTable td:hover{cursor: pointer;background: rgb(128, 223, 125);color: white;}
+/*模糊查询*/
+.JM_searchArea{width: 200px;position: relative;margin-left: 10px;}
+.JM_searchArea input{width: 100%;border: 1px solid #E2E2E2;height: 25px;}
+.JM_searchArea ul{width: 100%;border: 1px solid #E2E2E2;border-top: 0;max-height: 150px;overflow: auto;position: absolute;}
+.JM_searchArea ul li{height: 25px;line-height: 25px;}
+.JM_searchArea ul li:hover{cursor: pointer;}
+.chosedSearch{background-color: rgb(128, 223, 125);color: white;}
+/*分页样式*/
+.JM_setPage{margin: 5px auto;}
+.JM_setPage .errorTips{text-align: center;}
+.JM_setPage a{display:inline-block;border: 1px solid #E2E2E2;padding: 5px;border-radius: 4px;}
+.JM_setPage a.disabled:hover{cursor: not-allowed;}
+.JM_setPage a.disabled{background: #E2E2E2;color: white;}
+.JM_setPage ul{display: inline-block;vertical-align: top;}
+.JM_setPage ul li{float: left;display: inline;border: 1px solid #E2E2E2;padding: 5px 10px;margin: 0 5px;border-radius:4px ;}
+.JM_setPage ul li.nowPage{background: #fc9005;color: white;}
+.JM_setPage ul li.nowPage:hover{cursor: not-allowed !important;}
+.JM_setPage ul li.pageNumber:hover{cursor: pointer;background: #fc9005;color: white;}
+.JM_setPage select.pageCount{padding: 4px;border: 1px solid #e2e2e2;margin-left: 5px;border-radius: 4px;}
+.JM_setPage ul li.pageDot{border: none;}

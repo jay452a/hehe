@@ -1,0 +1,118 @@
+ul li{list-style: none;}
+.right_slide_child {
+	width: 95%;
+	position: fixed;
+	height: 100%;
+	/*overflow: auto;*/
+	left: 100%;
+	top: 0;
+	z-index: 99;
+	background: white;
+}
+
+.right_slide_child .head {
+	height: 3rem;
+	border-bottom: 1px solid #E2E2E2;
+	line-height: 3rem;
+	text-align: center;
+}
+
+.right_slide_child .head .back {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: url(../img/icon_2x.png) -167px -10px no-repeat;
+	transform: rotateZ(180deg);
+	-ms-transform: rotateZ(180deg);
+	-moz-transform: rotateZ(180deg);
+	-webkit-transform: rotateZ(180deg);
+	position: absolute;
+	left: 2.5%;
+	top: 0.8rem;
+}
+
+.right_slide_child ul li {
+	text-indent: 5%;
+	border-bottom: 1px solid #E2E2E2;
+	height: 4rem;
+	line-height: 4rem;
+	font-size: 14px;
+	padding-right: 2.5%;
+}
+
+.right_slide_child ul li .typeChosed {
+	width: 20px;
+	height: 15px;
+	display: inline-block;
+	background: url(../img/icon_2x.png) -144px -10px no-repeat;
+	float: right;
+	position: relative;
+	top: 0.7rem;
+}
+
+.right_slide_child ul {
+	height: calc(100% - 3rem);
+	overflow: auto;
+	padding-left: 0;
+}
+
+.right_slide_child ul li label {
+	width: 82%;
+	display: inline-block;
+}
+
+.right_slide_child ul li .checkbox {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border: 1px solid #e2e2e2;
+	position: relative;
+	top: 0.5rem;
+	margin-right: 5px
+}
+
+.right_slide_child ul li .checked:after {
+	background: red;
+	content: "\2713 ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: white
+}
+
+.right_slide_child ul li .normal:after {
+	content: "\2739  ";
+	background: red;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: white
+}
+
+.right_slide_child .chosedOver {
+	display: block;
+	float: right;
+	margin-right: 5px;
+	cursor: pointer
+}
+
+.cover {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: black;
+	opacity: 0.5;
+	z-index: 98;
+	display: none
+}
